@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深圳水裹汤泉 vs 广州有马空间 — 深度对比</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#e0e0e0;min-height:100vh;line-height:1.7}
+.hero{text-align:center;padding:80px 20px 60px;background:radial-gradient(ellipse at center,rgba(255,255,255,0.05) 0%,transparent 70%);border-bottom:1px solid rgba(255,255,255,0.08)}
+.hero h1{font-size:2.6em;font-weight:800;background:linear-gradient(135deg,#f093fb,#f5576c,#ffd86f);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px}
+.hero .subtitle{color:#999;font-size:1.05em;letter-spacing:1px}
+.hero .date-badge{display:inline-block;margin-top:18px;padding:6px 20px;border-radius:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);font-size:.85em;color:#aaa}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px}
+.score-banner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:30px;padding:40px 30px;background:rgba(255,255,255,0.03);border-radius:20px;border:1px solid rgba(255,255,255,0.06);margin-bottom:50px}
+.score-card{text-align:center}
+.score-card .score-num{font-size:4em;font-weight:900;background:linear-gradient(135deg,#ffd86f,#f5576c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.score-card.green .score-num{background:linear-gradient(135deg,#43e97b,#38f9d7);-webkit-background-clip:text;background-clip:text}
+.score-card .label{font-size:1.1em;font-weight:600;margin-top:6px;color:#ccc}
+.score-card .stars{color:#ffd86f;font-size:1.3em;letter-spacing:3px;margin-top:4px}
+.score-divider{display:flex;flex-direction:column;align-items:center;gap:6px}
+.score-divider .vs-circle{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:1.3em;font-weight:900;color:#aaa;border:2px solid rgba(255,255,255,0.15)}
+.section{margin-bottom:50px}
+.section-title{font-size:1.6em;font-weight:700;margin-bottom:24px;padding-bottom:10px;border-bottom:2px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:10px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.info-card{background:rgba(255,255,255,0.04);border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.07)}
+.info-card h3{font-size:1.25em;font-weight:700;margin-bottom:6px}
+.info-card .tag{display:inline-block;font-size:.78em;padding:3px 12px;border-radius:12px;margin-bottom:14px;font-weight:600}
+.tag-s{background:rgba(245,87,108,0.2);color:#f5576c}
+.tag-y{background:rgba(56,249,215,0.2);color:#38f9d7}
+.info-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:.93em}
+.info-row .key{color:#888}
+.info-row .val{color:#ddd;font-weight:500;text-align:right}
+.compare-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,0.03);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.07)}
+.compare-table th,.compare-table td{padding:16px 20px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.05);font-size:.93em}
+.compare-table th{background:rgba(255,255,255,0.06);font-weight:700;color:#bbb;font-size:.8em}
+.compare-table th.col-s{color:#f5576c}
+.compare-table th.col-y{color:#38f9d7}
+.winner{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.75em;font-weight:700;margin-left:6px}
+.win-s{background:rgba(245,87,108,0.15);color:#f5576c}
+.win-y{background:rgba(56,249,215,0.15);color:#38f9d7}
+.pros-cons-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pros-cons-card{border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.07)}
+.pros-cons-card.pros{background:rgba(67,233,123,0.06);border-color:rgba(67,233,123,0.15)}
+.pros-cons-card.cons{background:rgba(245,87,108,0.06);border-color:rgba(245,87,108,0.15)}
+.pros-cons-card h4{font-size:1.1em;margin-bottom:16px}
+.pros h4{color:#43e97b}
+.cons h4{color:#f5576c}
+.pros-cons-card ul{list-style:none;padding:0}
+.pros-cons-card li{padding:6px 0;font-size:.9em;line-height:1.6;display:flex;align-items:flex-start;gap:8px}
+.pros-cons-card li::before{content:'';min-width:6px;height:6px;border-radius:50%;margin-top:8px}
+.pros li::before{background:#43e97b}
+.cons li::before{background:#f5576c}
+.verdict{background:linear-gradient(135deg,rgba(245,87,108,0.08),rgba(56,249,215,0.08));border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:36px;margin-top:50px;text-align:center}
+.verdict h2{font-size:1.6em;margin-bottom:16px;color:#ffd86f}
+.verdict p{font-size:1.05em;max-width:700px;margin:0 auto;color:#ccc;line-height:1.8}
+.scene-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px;max-width:800px;margin-left:auto;margin-right:auto}
+.scene-card{background:rgba(255,255,255,0.04);border-radius:12px;padding:18px;text-align:center;border:1px solid rgba(255,255,255,0.06)}
+.scene-card .scene-icon{font-size:2em;margin-bottom:6px}
+.scene-card .scene-title{font-weight:700;color:#ffd86f;margin-bottom:4px}
+.scene-card .scene-rec{font-size:.9em;color:#aaa}
+footer{text-align:center;padding:40px 20px;color:#555;font-size:.8em;border-top:1px solid rgba(255,255,255,0.05)}
+.highlight{background:rgba(255,216,111,0.1);padding:2px 6px;border-radius:4px;color:#ffd86f}
+@media(max-width:768px){.hero h1{font-size:1.8em}.info-grid,.pros-cons-grid{grid-template-columns:1fr}.score-banner{grid-template-columns:1fr;gap:20px}}
+</style>
+</head>
+<body>
+<header class="hero">
+<h1>深圳水裹汤泉 vs 广州有马空间</h1>
+<p class="subtitle">两大城市微度假地标 · 全面深度对比</p>
+<div class="date-badge">📅 数据截至 2026 年 6 月 14 日 · 综合各平台最新评价</div>
+</header>
+<div class="container">
+<div class="score-banner">
+<div class="score-card"><div class="score-num">8.7</div><div class="label">深圳水裹汤泉</div><div class="stars">★★★★☆</div><div style="color:#888;font-size:.8em;margin-top:4px">大众点评热门榜 TOP1</div></div>
+<div class="score-divider"><div class="vs-circle">VS</div></div>
+<div class="score-card green"><div class="score-num">8.2</div><div class="label">广州有马空间</div><div class="stars">★★★★☆</div><div style="color:#888;font-size:.8em;margin-top:4px">大众点评 4.6 · 2026玩乐地入围</div></div>
+</div>
+<div class="section">
+<h2 class="section-title">📋 基本档案</h2>
+<div class="info-grid">
+<div class="info-card">
+<h3>🛁 深圳水裹汤泉</h3>
+<span class="tag tag-s">象上汇酒店集团 · 轻奢微度假</span>
+<div class="info-row"><span class="key">📍 地址</span><span class="val">福田区福强路3018号绿景花园二期</span></div>
+<div class="info-row"><span class="key">🏢 成立</span><span class="val">2023年11月 · 注册资本3000万</span></div>
+<div class="info-row"><span class="key">💰 人均</span><span class="val">约 ¥400-600（门票含水果饮品畅享）</span></div>
+<div class="info-row"><span class="key">⏰ 营业</span><span class="val">24 小时全天候</span></div>
+<div class="info-row"><span class="key">🎯 定位</span><span class="val">年轻人的都市生活会客厅</span></div>
+<div class="info-row"><span class="key">🏆 荣誉</span><span class="val">连续三年大众点评热门榜 TOP1</span></div>
+<div class="info-row"><span class="key">📱 社媒</span><span class="val">全平台粉丝 220 万+ · 曝光破亿</span></div>
+<div class="info-row"><span class="key">⭐ 客群</span><span class="val">25-35 岁占 50%+</span></div>
+</div>
+<div class="info-card">
+<h3>🏯 广州有马空间</h3>
+<span class="tag tag-y">有马健康管理集团 · 高端微度假</span>
+<div class="info-row"><span class="key">📍 地址</span><span class="val">海珠区新港东路618号南丰汇（琶洲）</span></div>
+<div class="info-row"><span class="key">🏢 门店</span><span class="val">琶洲店 · 长沙/合肥有分店</span></div>
+<div class="info-row"><span class="key">💰 人均</span><span class="val">¥979-1097（12h 门票含全日自助餐）</span></div>
+<div class="info-row"><span class="key">⏰ 营业</span><span class="val">24 小时（建议过夜体验）</span></div>
+<div class="info-row"><span class="key">🎯 定位</span><span class="val">一站式高端微度假综合体</span></div>
+<div class="info-row"><span class="key">🏆 荣誉</span><span class="val">2026 大众点评玩乐地入围</span></div>
+<div class="info-row"><span class="key">📊 评分</span><span class="val">大众点评 4.6 · 永安旅游 3.9/5</span></div>
+<div class="info-row"><span class="key">🏢 楼层</span><span class="val">4-5 层空间（2025年扩建）</span></div>
+</div>
+</div>
+</div>
+<div class="section">
+<h2 class="section-title">⚔️ 六维深度对比</h2>
+<table class="compare-table">
+<thead><tr><th>维度</th><th class="col-s">🛁 深圳水裹汤泉</th><th class="col-y">🏯 广州有马空间</th><th>胜出</th></tr></thead>
+<tbody>
+<tr><td>💰 价格 / 性价比</td><td>¥400-600 含水果饮品畅享，无隐形消费</td><td>¥979-1097 含全日自助餐，按摩额外收费贵</td><td><span class="winner win-s">水裹</span></td></tr>
+<tr><td>🍽️ 餐饮质量</td><td>水果饮品无限畅享 + 现炒融合菜，轻食为主</td><td>星级自助 + 海鲜火锅 + 榴莲，午餐一般晚餐丰富</td><td><span class="winner win-y">有马</span></td></tr>
+<tr><td>🎮 娱乐设施</td><td>PS5 · 电玩街区 · 轰趴馆 · 书吧 · 影音区</td><td>KTV · 射箭 · 电竞 · 台球 · 儿童乐园 · 影院</td><td><span class="winner win-y">有马</span></td></tr>
+<tr><td>🛏️ 休息 / 过夜</td><td>榻榻米 · 客房 · 安静角落多，设计注重待得住</td><td>沙发床+独立观影 · 但睡眠空间配置受差评</td><td><span class="winner win-s">水裹</span></td></tr>
+<tr><td>🧹 卫生与服务</td><td>日本清洁匠人新津春子升级卫生标准</td><td>全程陪同服务好；但2026.6有餐盘蚊虫投诉</td><td><span class="winner win-s">水裹</span></td></tr>
+<tr><td>📸 颜值 / 出片</td><td>工业风+Ins风 · 极简美学 · 处处出片</td><td>温馨雅致 · 高端商务风 · 适合成熟人群</td><td><span class="winner win-s">水裹</span></td></tr>
+<tr><td>👥 社交属性</td><td>水裹聚会欢乐加倍 · 小红书UGC生态强大</td><td>团建 · 商务会议 · 行政酒廊 · 偏商务社交</td><td><span class="winner win-s">水裹</span></td></tr>
+<tr><td>👶 亲子友好</td><td>未特别强调亲子设施</td><td>5楼儿童乐园 · 家庭票选项</td><td><span class="winner win-y">有马</span></td></tr>
+<tr><td>🚇 交通便利</td><td>福田区核心地段，地铁可达</td><td>琶洲会展核心区 · 地铁8号线新港东站</td><td style="color:#ffd86f">持平</td></tr>
+<tr><td>📊 口碑稳定性</td><td>连续三年 TOP1 · 差评极少</td><td>整体好评但波动大 · 近期有卫生投诉</td><td><span class="winner win-s">水裹</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section">
+<h2 class="section-title">🔍 各自优缺点</h2>
+<div class="pros-cons-grid">
+<div>
+<div class="pros-cons-card pros"><h4>✅ 水裹汤泉 · 优势</h4><ul><li>年轻人社交圣地，220万粉丝背书</li><li>水果饮品无限畅享，透明消费无套路</li><li>极简美学处处出片，小红书传播力极强</li><li>卫生标准行业领先，日本匠人升级清洁</li><li>¥400-600性价比远超同级竞品</li><li>待得住的空间设计，独处社交自由切换</li><li>连续三年大众点评TOP1，口碑极其稳定</li></ul></div>
+<div class="pros-cons-card cons" style="margin-top:16px"><h4>⚠️ 水裹汤泉 · 不足</h4><ul><li>餐饮轻食为主，缺少海鲜自助高档正餐</li><li>位于深圳，广州用户需跨城</li><li>亲子设施不突出</li><li>明星效应强，节假日可能拥挤</li></ul></div>
+</div>
+<div>
+<div class="pros-cons-card pros"><h4>✅ 有马空间 · 优势</h4><ul><li>海鲜自助火锅+全日星级餐饮，食材高档</li><li>KTV射箭电竞台球儿童乐园一网打尽</li><li>亲子友好，有家庭套餐</li><li>4-5层大空间，2025年新扩建</li><li>停车场高尔夫球车接送，细节周到</li><li>琶洲核心，毗邻广交会，商务出行方便</li></ul></div>
+<div class="pros-cons-card cons" style="margin-top:16px"><h4>⚠️ 有马空间 · 不足</h4><ul><li>人均 ¥1000+，消费门槛高</li><li>按摩额外收费高，技师水平参差</li><li>2026.6餐盘蚊虫投诉，卫生隐患</li><li>休息大厅嘈杂，过夜体验打折扣</li><li>高峰排队时间长，接待能力不足</li><li>午餐质量一般，与价格不匹配</li></ul></div>
+</div>
+</div>
+</div>
+<div class="verdict">
+<h2>🏆 怎么选？</h2>
+<p>水裹胜在年轻化、性价比和口碑稳定性；有马赢在餐饮品质和娱乐丰富度。</p>
+<div class="scene-grid">
+<div class="scene-card"><div class="scene-icon">📸</div><div class="scene-title">拍照打卡·闺蜜聚会</div><div class="scene-rec">👉 选 <span style="color:#f5576c">水裹汤泉</span></div></div>
+<div class="scene-card"><div class="scene-icon">🍽️</div><div class="scene-title">吃货·海鲜盛宴</div><div class="scene-rec">👉 选 <span style="color:#38f9d7">有马空间</span></div></div>
+<div class="scene-card"><div class="scene-icon">👶</div><div class="scene-title">亲子家庭出游</div><div class="scene-rec">👉 选 <span style="color:#38f9d7">有马空间</span></div></div>
+<div class="scene-card"><div class="scene-icon">💼</div><div class="scene-title">团建·商务社交</div><div class="scene-rec">👉 各有优势</div></div>
+<div class="scene-card"><div class="scene-icon">💤</div><div class="scene-title">躺平放松·过夜</div><div class="scene-rec">👉 选 <span style="color:#f5576c">水裹汤泉</span></div></div>
+<div class="scene-card"><div class="scene-icon">💰</div><div class="scene-title">预算有限</div><div class="scene-rec">👉 选 <span style="color:#f5576c">水裹汤泉</span></div></div>
+</div>
+<p style="margin-top:24px;color:#999;font-size:.85em">⚠️ 评价综合自大众点评、小红书、腾讯新闻、网易、Klook、永安旅游、去哪儿等平台，截至2026.06.14</p>
+</div>
+</div>
+<footer><p>数据来源：大众点评 · 小红书 · 腾讯新闻 · 网易 · Klook · 永安旅游 · 去哪儿 · 百度百科</p></footer>
+</body>
+</html>
